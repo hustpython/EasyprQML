@@ -1,0 +1,5 @@
+<RCC>
+    <qresource prefix="/">
+        <file>fonts/迷你简瘦金书.ttf</file>
+    </qresource>
+</RCC>

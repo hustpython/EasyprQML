@@ -1,0 +1,21 @@
+import QtQuick 2.0
+ListModel
+{
+    id:listtest
+    ListElement
+    {
+        textField:"灰度化"
+    }
+    ListElement
+    {
+        textField:"车牌定位"
+    }
+    ListElement
+    {
+        textField:"车牌标记"
+    }
+    ListElement
+    {
+        textField:"其他"
+    }
+}

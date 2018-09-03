@@ -1,0 +1,14 @@
+<RCC>
+    <qresource prefix="/">
+        <file>main/Main.qml</file>
+        <file>button/Basebtn.qml</file>
+        <file>top/Top.qml</file>
+        <file>top/Pop.qml</file>
+        <file>top/SettingPage.qml</file>
+        <file>button/Baseopt.qml</file>
+        <file>mid/Leftopt.qml</file>
+        <file>mid/Showimage.qml</file>
+        <file>mid/Listdelegate.qml</file>
+        <file>mid/Reslistview.qml</file>
+    </qresource>
+</RCC>

@@ -1,0 +1,16 @@
+<RCC>
+    <qresource prefix="/">
+        <file>ico/close.svg</file>
+        <file>ico/license-plate.svg</file>
+        <file>ico/maximize.svg</file>
+        <file>ico/rounded-rectangle.svg</file>
+        <file>ico/settings.svg</file>
+        <file>ico/substract.svg</file>
+        <file>ico/license-plate_copy.svg</file>
+        <file>ico/license-plate.png</file>
+        <file>ico/ico.ico</file>
+        <file>ico/background.jpg</file>
+        <file>ico/tool1.svg</file>
+        <file>ico/tool2.svg</file>
+    </qresource>
+</RCC>

@@ -10,5 +10,6 @@
         <file>mid/Showimage.qml</file>
         <file>mid/Listdelegate.qml</file>
         <file>mid/Reslistview.qml</file>
+        <file>mid/Rightlist.qml</file>
     </qresource>
 </RCC>

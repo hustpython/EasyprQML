@@ -12,8 +12,8 @@ Item {
         border.color: "black"
         opacity: 0.2
         color : "#c0ebd7"
-        width: label.width+10
-        height: label.height+20
+        width: 87*widthbili
+        height: 40*heightbili
         MouseArea
         {
             anchors.fill:parent
@@ -38,7 +38,7 @@ Item {
          color: "white"
          id: label
          text: qsTr(labelstr)
-         font.pixelSize:15
+         font.pixelSize:14*widthbili
          anchors.horizontalCenter: borderarea.horizontalCenter
          anchors.verticalCenter: borderarea.verticalCenter
      }

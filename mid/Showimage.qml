@@ -14,10 +14,10 @@ Item {
         border.color: "#770B77"
         color: "#F5F7F6"
         opacity: imgborderopa
-        width: mainRoot.width - 93
+        width: mainRoot.width - 245*widthbili
         //width:600
         //height: 600
-        height: mainRoot.height - 100
+        height: mainRoot.height - 80*heightbili
         Image {
             //anchors.fill: imgborder
             //anchors.horizontalCenter:imgborder.horizontalCenter
@@ -36,7 +36,7 @@ Item {
     }
     Text {
         color:"#FFFFFF"
-        font.pixelSize: 24
+        font.pixelSize: 24*widthbili
         anchors.centerIn: imgborder
         id: showopentext
         text: qsTr("双击打开文件")

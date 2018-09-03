@@ -10,11 +10,14 @@ Window {
     modality: Qt.ApplicationModal;//Qt.WindowModal;
     property real mouseXTMP: 0
     property real mouseYTMP: 0
-    width: 480
-    height: 320
-    color: "black"
-    flags:Qt.FramelessWindowHint || WindowStaysOnBottomHint   //添加了这一句
 
+
+    width: Screen.desktopAvailableWidth*0.6
+    height: Screen.desktopAvailableHeight*0.6
+    property real widthbili: width / Screen.desktopAvailableWidth
+    property real heightbili: height / Screen.desktopAvailableHeight
+    color: "black"
+    flags:Qt.FramelessWindowHint | Qt.WindowStaysOnTopHint     //添加了这一句
     Image {
         smooth: true
         opacity:0.6
@@ -41,6 +44,7 @@ Window {
                {
                    mainRoot.visibility = Window.Windowed
                    console.log("恢复")
+
                }
                else{
                    mainRoot.visibility = Window.Maximized
@@ -53,22 +57,22 @@ Window {
        }
     Column
     {
-    spacing: 2  //相邻项的间隔
+    spacing: 2*heightbili  //相邻项的间隔
     //anchors.horizontalCenter: parent.horizontalCenter
     Top.Top
     {
         id:topmenu
-        width:mainRoot.width;
-        height: 20
+        width:mainRoot.width*widthbili;
+        height: 10*heightbili
     }
     Item
     {
-        width: 40; height: 3
+        width: 40*widthbili; height: 20*heightbili
     }
 
     Mid.Leftopt
     {
-        width: 40; height: 40
+        width: 40*widthbili; height: 40*heightbili
     }
 
     }

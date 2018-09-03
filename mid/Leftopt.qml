@@ -16,7 +16,7 @@ Row{
     Column
     {
         id:leftopt
-        spacing: 15
+        spacing: 15*heightbili
         FileDialog
         {
         id:fds
@@ -41,7 +41,7 @@ Row{
         Btn.Baseopt
         {
             labelstr: "打开车牌图"
-            width: 40; height: 40
+            width: 40*widthbili; height: 40*heightbili
             onButtonClicked:
             {
                 fds.open()
@@ -61,28 +61,28 @@ Row{
 
         Btn.Baseopt
         {
-            width: 40; height: 40
+            width: 40*widthbili; height: 40*heightbili
         }
         Btn.Baseopt
         {
-            labelstr: "打开摄像头"
-            width: 40; height: 40
+            labelstr: "开启摄像头"
+            width: 40*widthbili; height: 40*heightbili
         }
         Btn.Baseopt
         {
             labelstr: "新车牌识别 "
-            width: 40; height: 40
+            width: 40*widthbili; height: 40*heightbili
         }
         Item
         {
-             width: 90
-             height: 30
+             width: 90*widthbili
+             height: 30*heightbili
         }
 
         ListView
         {
-            spacing: 20
-            width: 90
+            spacing: 20*heightbili
+            width: 90*widthbili
             height: 150
             //anchors.fill: parent
             model: Listdelegate
@@ -92,21 +92,25 @@ Row{
         }
 
     }
+    Item {
+        width: 10*widthbili
+        height: 20*heightbili
+    }
     Column
     {
         spacing: 0
     Text {
         id:showimgurl
-        font.pixelSize: 9
+        font.pixelSize: 12*widthbili
         color: "white"
-        width: 100
-        height: 10
+        width: 100*widthbili
+        height: 10*heightbili
         text: qsTr("图片显示区域")
     }
     Item
     {
-       width: 100
-       height: 3
+       width: 100*widthbili
+       height: 9*heightbili
     }
 
     Showimage
@@ -115,13 +119,25 @@ Row{
     //anchors.leftMargin: 0
     id:imgshow
     imgurl: getstring
-    width:100;
-    height: 100
+    width: mainRoot.width - 245*widthbili;
+    height: 100*heightbili
     onDoubleClicked:
     {
        fds.open()
     }
     }
+
+    }
+    Item
+    {
+        height: 100
+        width: 10*widthbili
+    }
+
+    Rightlist
+    {
+        width: 120*widthbili
+        height: 100*heightbili
     }
 }
 }

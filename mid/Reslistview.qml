@@ -5,8 +5,8 @@ Component
     Item
     {
         property string toolurl: "qrc:/ico/tool1.svg"
-        width: 87
-        height: 30
+        width: 87*widthbili
+        height: 30*heightbili
     Rectangle
     {
         radius: 3
@@ -14,8 +14,8 @@ Component
         smooth : true
         id:rec
         color: "#c0ebd7"
-        width: 87
-        height: 35
+        width: 87*widthbili
+        height: 35*heightbili
         MouseArea
         {
             anchors.fill:parent
@@ -57,8 +57,8 @@ Image {
     anchors.left: rec.left
     anchors.leftMargin: 6
     anchors.verticalCenter: rec.verticalCenter
-    height: 25
-    width: 25
+    height: 25*heightbili
+    width: 25*widthbili
     source: toolurl
 }
 RotationAnimation{
@@ -79,7 +79,7 @@ Text
     anchors.left: toolico.right
     anchors.leftMargin: 5
     text:textField
-    font.pixelSize: 12
+    font.pixelSize: 12*widthbili
 }
 }
 }

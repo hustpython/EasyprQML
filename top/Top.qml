@@ -12,7 +12,7 @@ Item
 
     Rectangle {
         id: idrec
-        color: "black"
+        color: "#3FE295"
         opacity:0.8
         width:mainRoot.width; height: 20
     }

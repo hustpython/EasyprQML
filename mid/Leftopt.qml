@@ -6,6 +6,7 @@ import QtQuick.Controls.Styles 1.4
 import QtGraphicalEffects 1.0
 import QtQml.Models 2.1
 import "../button" as Btn
+
 Item
 {
     //anchors.left: mainRoot.left
@@ -29,7 +30,7 @@ Row{
         onAccepted: {
             imgshow.imgborderopa = 1.0
             getstring = fds.fileUrl;
-            showimgurl.text =  qsTr("You Choose:"+getstring)
+            mainRoot.buttomstring = getstring
             console.log("You chose: " + fds.fileUrl)
         }
         onRejected: {
@@ -76,7 +77,23 @@ Row{
         Item
         {
              width: 90*widthbili
-             height: 30*heightbili
+             height: 20*heightbili
+
+        Rectangle
+        {
+            anchors.centerIn: parent
+            height:  1*heightbili;
+            width:  90*widthbili
+            LinearGradient {
+                anchors.fill: parent
+                start: Qt.point(0, 0)
+                end: Qt.point(width, 0)
+                gradient: Gradient {
+                    GradientStop { position: 0.5; color: "lightsteelblue" }
+                    GradientStop { position: 0.0; color: "#2F3D45" }
+                }
+            }
+        }
         }
 
         ListView
@@ -93,41 +110,37 @@ Row{
 
     }
     Item {
-        width: 10*widthbili
+        width: 5*widthbili
         height: 20*heightbili
     }
-    Column
+    Rectangle
     {
-        spacing: 0
-    Text {
-        id:showimgurl
-        font.pixelSize: 12*widthbili
-        color: "white"
-        width: 100*widthbili
-        height: 10*heightbili
-        text: qsTr("图片显示区域")
+        width: 1*widthbili;
+        height: mainRoot.height - 100*heightbili
+        gradient: Gradient {
+            GradientStop { position: 0.0; color: "lightsteelblue" }
+            GradientStop { position: 1.0; color: "#2F3D45" }
+        }
     }
-    Item
-    {
-       width: 100*widthbili
-       height: 9*heightbili
+    Item {
+        width: 4*widthbili
+        height: 20*heightbili
     }
-
     Showimage
     {
     //anchors.left: leftopt.right
     //anchors.leftMargin: 0
     id:imgshow
     imgurl: getstring
-    width: mainRoot.width - 350*widthbili;
-    height: 100*heightbili
+    width:  mainRoot.width - 300*widthbili;
+    height: mainRoot.height - 100*heightbili
     onDoubleClicked:
     {
        fds.open()
     }
     }
 
-    }
+
     Item
     {
         height: 100

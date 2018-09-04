@@ -9,26 +9,23 @@ Item {
         //anchors.fill: parent
         id:imgborder
         clip:true
-        radius: 10
-        border.color: "#770B77"
-        color: "#F5F7F6"
+        color: "#2F3D45"
         opacity: imgborderopa
-        width: mainRoot.width - 350*widthbili
+        width: mainRoot.width - 300*widthbili
         //width:600
         //height: 600
         height: mainRoot.height - 100*heightbili
+            gradient: Gradient {
+                GradientStop { position: 0.0; color: "lightsteelblue" }
+                GradientStop { position: 1.0; color: "#2F3D45" }
+            }
         Image {
-            //anchors.fill: imgborder
-            //anchors.horizontalCenter:imgborder.horizontalCenter
-            //anchors.verticalCenter: imgborder.verticalCenter
             clip: true
             //anchors.centerIn: imgborder
             width: imgborder.width
             height: imgborder.height
             fillMode: Image.PreserveAspectFit
             id: pig
-            //x:-hbar.position * width
-            //y:-vbar.position * height
             source:imgurl
 
         }

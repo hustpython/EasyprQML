@@ -10,6 +10,7 @@ Window {
     modality: Qt.ApplicationModal;//Qt.WindowModal;
     property real mouseXTMP: 0
     property real mouseYTMP: 0
+    property string buttomstring: "版本:1.0"
 
 
     width: Screen.desktopAvailableWidth*0.6
@@ -72,11 +73,16 @@ Window {
 
     Mid.Leftopt
     {
-        width: 40*widthbili; height: 40*heightbili
+        width: 40*widthbili; height: mainRoot.height - 65 * heightbili
+    }
+
+    Top.Buttombar
+    {
+        statusstring:buttomstring
+        width: mainRoot.width
+        height: 30*heightbili
     }
 
     }
-
-
 }
 

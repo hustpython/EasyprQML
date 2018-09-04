@@ -12,5 +12,6 @@
         <file>mid/Reslistview.qml</file>
         <file>mid/Rightlist.qml</file>
         <file>button/Basegrid.qml</file>
+        <file>top/Buttombar.qml</file>
     </qresource>
 </RCC>

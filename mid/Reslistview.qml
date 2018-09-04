@@ -55,7 +55,7 @@ Image {
     id:toolico
     opacity:0.7
     anchors.left: rec.left
-    anchors.leftMargin: 6
+    anchors.leftMargin: 4*widthbili
     anchors.verticalCenter: rec.verticalCenter
     height: 25*heightbili
     width: 25*widthbili
@@ -77,7 +77,7 @@ Text
     id:textshow
     anchors.verticalCenter: rec.verticalCenter
     anchors.left: toolico.right
-    anchors.leftMargin: 5
+    anchors.leftMargin: 5*widthbili
     text:textField
     font.pixelSize: 12*widthbili
 }

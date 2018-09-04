@@ -30,7 +30,7 @@ include_directories(${OpenCV_INCLUDE_DIRS})
 link_directories(
     lib
 )
-add_executable(${PROJECT_NAME} test/mytest.cpp)
+add_executable(${PROJECT_NAME} test/main.cpp)
 # link opencv libs
 
 target_link_libraries(${PROJECT_NAME} easypr thirdparty ${OpenCV_LIBS})

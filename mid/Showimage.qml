@@ -1,6 +1,5 @@
 import QtQuick 2.9
 import QtQuick.Controls 2.2
-
 Item {
     property string imgurl: ""
     property real imgborderopa: 0.5
@@ -14,10 +13,10 @@ Item {
         border.color: "#770B77"
         color: "#F5F7F6"
         opacity: imgborderopa
-        width: mainRoot.width - 245*widthbili
+        width: mainRoot.width - 350*widthbili
         //width:600
         //height: 600
-        height: mainRoot.height - 80*heightbili
+        height: mainRoot.height - 100*heightbili
         Image {
             //anchors.fill: imgborder
             //anchors.horizontalCenter:imgborder.horizontalCenter
@@ -97,7 +96,6 @@ Item {
     {
         imgitem.doubleClicked()
         showopentext.text = qsTr("")
-
     }
 
    }

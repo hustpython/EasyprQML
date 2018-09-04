@@ -67,7 +67,7 @@ Window {
     }
     Item
     {
-        width: 40*widthbili; height: 20*heightbili
+        width: 40*widthbili; height: 30*heightbili
     }
 
     Mid.Leftopt

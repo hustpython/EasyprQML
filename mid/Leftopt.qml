@@ -25,7 +25,7 @@ Row{
         selectExisting: true
         selectFolder: false
         selectMultiple: false
-        nameFilters: ["图片 (*.jpg|*.png|*.svg)"]
+        nameFilters: ["图片 (*.jpg|*.jpeg|*.png|*.svg)"]
         onAccepted: {
             imgshow.imgborderopa = 1.0
             getstring = fds.fileUrl;
@@ -119,7 +119,7 @@ Row{
     //anchors.leftMargin: 0
     id:imgshow
     imgurl: getstring
-    width: mainRoot.width - 245*widthbili;
+    width: mainRoot.width - 350*widthbili;
     height: 100*heightbili
     onDoubleClicked:
     {

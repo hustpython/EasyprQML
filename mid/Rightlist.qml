@@ -1,25 +1,33 @@
 import QtQuick 2.0
+import QtQuick.Controls 1.4
+import "../button" as Btn
 
 Flickable {
-    width: 200; height: 200
-    contentWidth:mainRoot.width
-    contentHeight:mainRoot.height
-    Rectangle
-    {
-        width: 130*widthbili
-        height: 100*heightbili
-        radius: 3
-        color: "#c0ebd7"
-        Text {
-            color: "red"
-            font.pixelSize: 15*widthbili
-            id: licenseshow
-            text: qsTr("京F.A5888")
-        }
-    }
+    width: 200*widthbili; height: 200*heightbili
+    contentWidth:0
+    contentHeight:200*heightbili
+
     MouseArea
     {
         anchors.fill: parent
     }
+
+    Column
+    {
+        Item
+        {
+            height: 10*widthbili
+            width: 80*heightbili
+        }
+
+        Btn.Basegrid
+        {
+            width: 80*widthbili
+            height: 50*heightbili
+        }
+
+    }
+
+
 
 }

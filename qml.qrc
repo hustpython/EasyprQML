@@ -13,5 +13,6 @@
         <file>mid/Rightlist.qml</file>
         <file>button/Basegrid.qml</file>
         <file>top/Buttombar.qml</file>
+        <file>mid/Platedelegate.qml</file>
     </qresource>
 </RCC>

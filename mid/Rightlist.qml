@@ -1,5 +1,6 @@
 import QtQuick 2.0
 import QtQuick.Controls 1.4
+import QtQml.Models 2.1
 import "../button" as Btn
 
 Flickable {
@@ -12,52 +13,14 @@ Flickable {
         anchors.fill: parent
     }
 
-    Column
+    ListView
     {
-        spacing: 2
-        Item
+        id:showplates
+        width: 200*widthbili; height: 200*heightbili
+        model: Platedelegate
         {
-            height: 10*widthbili
-            width: 80*heightbili
         }
-
-        Btn.Basegrid
-        {
-            licensechar: "鲁A·KL315"
-            width: 80*widthbili
-            height: 50*heightbili
-        }
-
-        Item
-        {
-            height: 90*widthbili
-            width: 80*heightbili
-        }
-
-        Btn.Basegrid
-        {
-            colorstr: "yellow"
-            licensechar: "渝F.56N46"
-            width: 80*widthbili
-            height: 50*heightbili
-        }
-
-        Item
-        {
-            height: 90*widthbili
-            width: 80*heightbili
-        }
-
-        Btn.Basegrid
-        {
-            licensechar: "京 A.GH092"
-            colorstr: "blue"
-            width: 80*widthbili
-            height: 50*heightbili
-        }
-
+        delegate: Btn.Basegrid{}
     }
-
-
 
 }

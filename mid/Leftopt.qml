@@ -6,12 +6,17 @@ import QtQuick.Controls.Styles 1.4
 import QtGraphicalEffects 1.0
 import QtQml.Models 2.1
 import "../button" as Btn
-
+import com.mxq.easypr 1.0
 Item
 {
     //anchors.left: mainRoot.left
     //anchors.leftMargin: 10
     property string getstring: ""
+    Platedelegate
+    {
+        id:platelist
+    }
+
 Row{
     spacing: 0
     Column
@@ -28,10 +33,41 @@ Row{
         selectMultiple: false
         nameFilters: ["图片 (*.jpg|*.jpeg|*.png|*.svg)"]
         onAccepted: {
+            mainRoot.buttomplates = ""
             imgshow.imgborderopa = 1.0
             getstring = fds.fileUrl;
-            mainRoot.buttomstring = getstring
+            mainRoot.buttomstring = getstring.substring(7,getstring.length)
+            easypr.imgurl = getstring
+            platelist.clear()
+            var i = 0;
+            var countplate = easypr.plates.length
+            var platestr;
+            var platecolor;
+            var modelplate;
+            var modelcolor;
+            var modelprovince
+            for(;i<countplate;i++)
+            {
+                platestr = easypr.plates[i]
+                platecolor = platestr.substring(0,1)
+                modelplate = platestr.substring(3,platestr.length)
+                modelprovince = platestr.substring(3,4)
+                if(platecolor == "蓝")
+                {
+                    modelcolor= "blue"
+                }
+                else
+                {
+                    modelcolor = "yellow"
+                }
+
+                platelist.append({"licensechar":modelplate,"colorstr":modelcolor,"province":modelprovince})
+
+                mainRoot.buttomplates += "     "+ platestr
+
+            }
             console.log("You chose: " + fds.fileUrl)
+
         }
         onRejected: {
             if(getstring == "")
@@ -151,6 +187,17 @@ Row{
     {
         width: 120*widthbili
         height: 100*heightbili
+        ListView
+        {
+            id:showplates
+            width: 200*widthbili; height: 200*heightbili
+            model:platelist
+            delegate: Btn.Basegrid{}
+        }
     }
+}
+PlateLicense
+{
+    id:easypr
 }
 }

@@ -11,6 +11,7 @@ Window {
     property real mouseXTMP: 0
     property real mouseYTMP: 0
     property string buttomstring: "版本:1.0"
+    property string buttomplates: ""
 
 
     width: Screen.desktopAvailableWidth*0.6
@@ -78,7 +79,7 @@ Window {
 
     Top.Buttombar
     {
-        statusstring:buttomstring
+        statusstring:buttomstring+buttomplates
         width: mainRoot.width
         height: 30*heightbili
     }
